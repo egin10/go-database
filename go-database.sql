@@ -19,6 +19,16 @@
 CREATE DATABASE IF NOT EXISTS `go_database` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `go_database`;
 
+-- Dumping structure for table go_database.comments
+CREATE TABLE IF NOT EXISTS `comments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(100) NOT NULL,
+  `comment` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4;
+
+-- Data exporting was unselected.
+
 -- Dumping structure for table go_database.customer
 CREATE TABLE IF NOT EXISTS `customer` (
   `id` varchar(100) NOT NULL,
@@ -30,6 +40,15 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `birth_date` date DEFAULT NULL,
   `married` tinyint(1) DEFAULT 0,
   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Data exporting was unselected.
+
+-- Dumping structure for table go_database.user
+CREATE TABLE IF NOT EXISTS `user` (
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Data exporting was unselected.
